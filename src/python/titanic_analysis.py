@@ -283,9 +283,6 @@ except Exception as e:
 print()
 
 
-submission.to_csv('submission.csv', index=False)
-print("Predictions saved to submission.csv")
-print()
 
 
 # Complete
