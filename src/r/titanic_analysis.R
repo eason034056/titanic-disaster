@@ -300,7 +300,7 @@ submission <- data.frame(
   PassengerId = test_df$PassengerId,
   Survived = test_predictions_numeric
 )
-write.csv(submission, "data/submission.csv", row.names = FALSE)
+write.csv(submission, "r/submission.csv", row.names = FALSE)
 
 
 # Completion
