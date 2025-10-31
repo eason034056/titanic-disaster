@@ -295,6 +295,13 @@ cat(sprintf("Recall: %.4f\n", recall))
 cat(sprintf("F1 Score: %.4f\n", f1_score))
 cat("\n")
 
+# Save prediction results
+submission <- data.frame(
+  PassengerId = test_df$PassengerId,
+  Survived = test_predictions_numeric
+)
+write.csv(submission, "data/submission.csv", row.names = FALSE)
+
 
 # Completion
 cat("================================================================================\n")

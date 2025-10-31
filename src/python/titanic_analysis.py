@@ -284,6 +284,8 @@ print()
 
 
 
+submission.to_csv('data/submission.csv', index=False)
+
 
 # Complete
 print("="*80)
