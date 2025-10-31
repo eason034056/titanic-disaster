@@ -284,7 +284,7 @@ print()
 
 
 
-submission.to_csv('python/submission.csv', index=False)
+submission.to_csv('submission.csv', index=False)
 
 
 # Complete
