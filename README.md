@@ -63,7 +63,9 @@ titanic-disaster/
 │   ├── data/                          # Data directory
 │   │   ├── train.csv                  # Training data
 │   │   ├── test.csv                   # Testing data
-│   │   └── gender_submission.csv      # Submission example
+│   │   ├── gender_submission.csv      # Submission example
+│   │   ├── submission_python.csv      # Python prediction output (generated)
+│   │   └── submission_r.csv           # R prediction output (generated)
 │   ├── python/                        # Python analysis
 │   │   ├── Dockerfile                 # Python Docker configuration
 │   │   ├── requirements.txt           # Python package dependencies
@@ -101,6 +103,18 @@ docker build -t titanic-python .
 docker run -v "$(pwd)/../data:/app/data" titanic-python
 ```
 
+#### Output Files
+
+After running the Python analysis, the prediction results will be saved to:
+
+```
+src/data/submission_python.csv
+```
+
+This file contains:
+- `PassengerId`: The ID of each passenger
+- `Survived`: The predicted survival outcome (0 = Did not survive, 1 = Survived)
+
 ---
 
 ## Running R Analysis
@@ -135,6 +149,17 @@ docker build -t titanic-r .
 docker run -v "$(pwd)/../data:/app/data" titanic-r
 ```
 
+#### Output Files
+
+After running the R analysis, the prediction results will be saved to:
+
+```
+src/data/submission_r.csv
+```
+
+This file contains:
+- `PassengerId`: The ID of each passenger
+- `Survived`: The predicted survival outcome (0 = Did not survive, 1 = Survived)
 
 ---
 
